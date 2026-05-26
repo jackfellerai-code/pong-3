@@ -1,10 +1,11 @@
 void intro () {
   background(LightP);
+  textFont(myFont);
+  textAlign(CENTER, CENTER);
   
   fill(Turq);
-  textSize(135);
-  createFont("AgencyFB-Bold-48" 150);
-  text("PONG", 400, 250);
+  textSize(80);
+  text("PONG", width/2, 150);
 }
 
 void introClicks () {

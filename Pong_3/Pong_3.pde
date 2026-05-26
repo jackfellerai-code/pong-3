@@ -2,6 +2,8 @@
 //Jack Feller
 //May, 13, 2026
 
+
+
 //color gradientBlues
  color  Purple = #7400B8;
  color  LightP = #6930C3;
@@ -25,10 +27,18 @@ final int GAMEOVER = 4;
 //entity variables
 float leftx, lefty, leftd, rightx, righty, rightd; //paddles
 float ballx, bally, balld; //ball
+float vx, vy;
 
+int leftscore, rightscore, timer;
+
+//keyboard variables 
+boolean wkey, skey, upkey, downkey;
+
+PFont myFont;
 void setup() {
   size(800, 600);
   mode = INTRO;
+  myFont = loadFont("AgencyFB-Bold-48.vlw");
   
   //intitilize paddles
   leftx = 0;
@@ -43,10 +53,18 @@ void setup() {
   ballx = width/2;
   bally = height/2;
   balld = 100;
+  vx = random(-3,3);
+  vy = random(-3,3);
   
+  rightscore = leftscore = 0;
+  timer = 100;
+  
+   wkey = skey = upkey = downkey = false;
 }
 
 void draw() {
+  println(mouseX, mouseY);
+  
   if (mode == INTRO) {
     intro();
   } else if (mode == GAME) {
