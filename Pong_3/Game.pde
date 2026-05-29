@@ -28,8 +28,22 @@ void game() {
 
   if (wkey == true) lefty = lefty - 5;
   if (skey == true) lefty = lefty + 5;
+  
+  if (AI == false) {
   if (upkey == true) righty = righty - 5;
   if (downkey == true) righty = righty + 5;
+  } else {
+    
+    /*
+    
+    if the ball is on the right side {
+    if ball is above the right paddle, move up
+    if ball is below the right paddle, move down
+    }
+    
+    */
+    
+  }
 
   //move ball
   if (timer < 0) {

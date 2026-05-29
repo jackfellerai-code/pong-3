@@ -2,8 +2,6 @@
 //Jack Feller
 //May, 13, 2026
 
-
-
 //color gradientBlues
  color  Purple = #7400B8;
  color  LightP = #6930C3;
@@ -28,8 +26,13 @@ final int GAMEOVER = 4;
 float leftx, lefty, leftd, rightx, righty, rightd; //paddles
 float ballx, bally, balld; //ball
 float vx, vy;
+boolean AI;
 
 int leftscore, rightscore, timer;
+
+int clickedOnRect() {
+  rect(0, 0, 100, 100);
+}
 
 //keyboard variables 
 boolean wkey, skey, upkey, downkey;
